@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My App</title>
-    <script type="module" crossorigin src="/assets/index-87ad91fc.js"></script>
-    <link rel="stylesheet" href="/assets/index-aa8978d2.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>Loading...</title>
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: monospace, monospace;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Don Hernandez</h1>
+  <script>
+    setTimeout(() => {
+      window.location.href = "/";
+    }, 1000); // 1 second delay
+  </script>
+</body>
 </html>
