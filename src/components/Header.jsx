@@ -5,7 +5,7 @@ import "./Header.css";
 function Header() {
   return (
     <header className="header">
-      <div className="logo">ARCHI<span style={{ color: "var(--accent)" }}>PORT</span></div>
+      <div className="logo">donovan a hernandez</div>
       <nav>
         <NavLink to="/" end>Home</NavLink>
         <NavLink to="/portfolio">Portfolio</NavLink>

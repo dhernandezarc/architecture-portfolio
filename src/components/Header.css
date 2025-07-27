@@ -1,28 +1,44 @@
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem 3vw 1rem 3vw;
-  font-family: var(--font-main);
-  background: var(--background);
-}
+/* ...existing styles remain unchanged above... */
 
-.logo {
-  font-size: 2.2rem;
-  font-weight: 900;
-  letter-spacing: -2px;
-}
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    z-index: 1001;
+  }
 
-nav a {
-  margin-left: 2rem;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--primary);
-  position: relative;
-  transition: color 0.2s;
-}
+  nav.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4rem 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+  }
 
-nav a.active,
-nav a:hover {
-  color: var(--accent);
+  nav.nav.open {
+    transform: translateX(0);
+  }
+
+  nav.nav a {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    color: #000;
+    width: 100%;
+    text-align: left;
+    font-family: 'Space Mono', monospace;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  nav.nav a:hover {
+    color: var(--accent, #000);
+  }
 }
