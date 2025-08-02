@@ -5,7 +5,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
-    >
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
@@ -22,18 +22,29 @@
         height: 100vh;
         background: #000;
         color: #fff;
-        font-family: sans-serif;
+        font-family: 'Space Mono', monospace, sans-serif;
+        margin: 0;
       }
 
       /* Once loaded, React's CSS takes over */
       body, html {
         margin: 0;
         padding: 0;
-        height: auto;
+        height: 100%;
         background: #000;
         color: #fff;
+        font-family: 'Space Mono', monospace, sans-serif;
       }
     </style>
+    <script>
+      // Remove loading class as soon as possible to avoid stuck splash
+      document.addEventListener('DOMContentLoaded', () => {
+        const root = document.getElementById('root');
+        if (root) {
+          root.classList.remove('loading');
+        }
+      });
+    </script>
     <script type="module" crossorigin src="/assets/index-3393f646.js"></script>
     <link rel="stylesheet" href="/assets/index-9ea7a824.css">
   </head>
@@ -44,4 +55,5 @@
     
   </body>
 </html>
+
 
