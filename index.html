@@ -14,8 +14,8 @@
     <title>DONOVAN A HERNANDEZ</title>
     <link rel="icon" type="image/png" href="/favicon.png" />
     <style>
-      /* Only center the page while it's loading */
-      #root.loading {
+      /* Only styles the initial static splash, before React mounts */
+      #root {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -26,7 +26,6 @@
         margin: 0;
       }
 
-      /* Once loaded, React's CSS takes over */
       body, html {
         margin: 0;
         padding: 0;
@@ -36,24 +35,11 @@
         font-family: 'Space Mono', monospace, sans-serif;
       }
     </style>
-    <script>
-      // Remove loading class as soon as possible to avoid stuck splash
-      document.addEventListener('DOMContentLoaded', () => {
-        const root = document.getElementById('root');
-        if (root) {
-          root.classList.remove('loading');
-        }
-      });
-    </script>
-    <script type="module" crossorigin src="/assets/index-3393f646.js"></script>
-    <link rel="stylesheet" href="/assets/index-9ea7a824.css">
+    <script type="module" crossorigin src="/assets/index-4aed774a.js"></script>
+    <link rel="stylesheet" href="/assets/index-351d7219.css">
   </head>
   <body>
-    <div id="root" class="loading">
-      <h1>DONOVAN A HERNANDEZ</h1>
-    </div>
+    <div id="root"></div>
     
   </body>
 </html>
-
-
