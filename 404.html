@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Donovan Hernandez – Architecture, Photography, and Graphic Design."
+    />
+    <title>DONOVAN A HERNANDEZ</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Splash CSS -->
+    <link rel="stylesheet" href="/src/components/splash.css" />
+
+    <style>
+      /* Root fallback (shows while React loads) */
+      #root {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #000;
+        color: #fff;
+        font-family: 'Space Mono', monospace, sans-serif;
+        font-size: 1rem;
+      }
+
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- React Root -->
+    <div id="root"></div>
+
+    <!-- Auto-hide Splash Script -->
+    <script>
+      window.addEventListener("load", () => {
+        const splash = document.getElementById("splash");
+
+        // After 2 seconds, start fade out
+        setTimeout(() => {
+          splash.classList.add("dissolve");
+
+          // After fade finishes, fully remove from DOM
+          setTimeout(() => {
+            splash.style.display = "none";
+          }, 500); // match CSS transition duration
+        }, 2000); // splash screen duration
+      });
+    </script>
+
+    <!-- React entry point -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
