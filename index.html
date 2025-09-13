@@ -13,8 +13,12 @@
     />
     <title>DONOVAN A HERNANDEZ</title>
     <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Splash CSS -->
+    
+
     <style>
-      /* Temporary fallback splash (before React loads) */
+      /* Root fallback (shows while React loads) */
       #root {
         display: flex;
         justify-content: center;
@@ -34,13 +38,36 @@
         color: #fff;
       }
     </style>
-    <script type="module" crossorigin src="/assets/index-37529edc.js"></script>
-    <link rel="stylesheet" href="/assets/index-183bb183.css">
+    <script type="module" crossorigin src="/assets/index-f1c95f8f.js"></script>
+    <link rel="stylesheet" href="/assets/index-f845bcd7.css">
   </head>
   <body>
-    <div id="root">
-      DONOVAN A HERNANDEZ
+    <!-- Splash Screen -->
+    <div id="splash">
+      <button class="splash-button">DONOVAN A HERNANDEZ</button>
     </div>
+
+    <!-- React Root -->
+    <div id="root"></div>
+
+    <!-- Auto-hide Splash Script -->
+    <script>
+      window.addEventListener("load", () => {
+        const splash = document.getElementById("splash");
+
+        // After 2 seconds, start fade out
+        setTimeout(() => {
+          splash.classList.add("dissolve");
+
+          // After fade finishes, fully remove from DOM
+          setTimeout(() => {
+            splash.style.display = "none";
+          }, 500); // match CSS transition duration
+        }, 2000); // splash screen duration
+      });
+    </script>
+
+    <!-- React entry point -->
     
   </body>
 </html>
